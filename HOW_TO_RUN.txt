@@ -1,0 +1,121 @@
+========================================================================
+       PORTABLE OFFLINE CODING ASSISTANT (C, JAVA & ORACLE SQL)
+                         HOW TO RUN GUIDE
+========================================================================
+
+Yeh tool 100% OFFLINE hai (kisi internet ya admin install ki zaroorat nahi).
+Sab kuch isi folder ke andar embedded hai.
+
+------------------------------------------------------------------------
+STEP 1: Pen Drive Lagao (Aur Copy Karo Agar Possible Ho)
+------------------------------------------------------------------------
+1. Pen drive ko college ke Windows computer mein lagao.
+2. Best practice: "PORTABLE_AI" folder ko copy karke Desktop par paste
+   kar lo (Desktop se read/write speed tez hoti hai aur USB par load nahi
+   aata). Agar copy karna allowed nahi hai, to direct pen drive se bhi
+   chala sakte ho.
+
+------------------------------------------------------------------------
+STEP 2: Sabse Pehle DIAGNOSTICS Run Karo (ZAROORI)
+------------------------------------------------------------------------
+1. "DIAGNOSTICS.bat" par double-click karo (ya Command Prompt se chalao).
+2. Check karo ki yeh 3 cheezein [OK] aa rahi hain:
+   - Portable Python Runtime Check -> [OK]
+   - Inference Engine Check (llama-server.exe) -> [OK]
+   - Local Model Files -> dono .gguf files dikh rahi hain
+3. Window mein yeh bhi note kar lena:
+   - System RAM kitni hai (~16 GB)
+   - Java / javac installed hai ya nahi
+   - gcc ya Turbo C installed hai ya nahi
+
+Agar college antivirus ya AppLocker "llama-server.exe" ko block karta hai,
+to koi bypass try mat karna -- lab teacher/admin se approved directory
+poochhna jahan se allowed ho.
+
+------------------------------------------------------------------------
+STEP 3: Assistant Ko Start Karo
+------------------------------------------------------------------------
+1. "START.bat" par double-click karo.
+2. Screen par aayega:
+   "Loading model: Qwen3 4B Instruct ... Mode: CPU-only, 100% offline."
+   Model load hone mein 5 se 15 second lagenge.
+3. Model ready hone par Main Menu aayega.
+
+------------------------------------------------------------------------
+STEP 4: Model Selection Tips
+------------------------------------------------------------------------
+Menu se model choose ya switch kar sakte ho:
+- Model 1: Qwen3 4B Instruct (~2.5 GB) [DEFAULT]
+  -> Complex logic, Level 3/4 C problems, OOP Java, aur Oracle SQL ke liye best hai.
+- Model 2: Qwen2.5 Coder 1.5B (~1.0 GB)
+  -> Agar college ka computer bohot purana/slow hai, to '6. Switch Model'
+     karke isko choose karo; yeh 3x tez generate karega.
+
+------------------------------------------------------------------------
+STEP 5: Question Ya Debugging Mode Choose Karo
+------------------------------------------------------------------------
+Main Menu par options:
+  1. C Programming
+  2. Java Programming
+  3. Oracle SQL / PL-SQL
+  4. Debug Existing Code / Fix Error (C, Java, SQL)
+  5. Configure C Options (Difficulty / Turbo C)
+  6. Switch Model
+  7. Exit
+
+AGAR NORMAL PROGRAM GENERATE KARNA HAI (1, 2 ya 3):
+1. Apna question paste/type karo aur nayi line par 'END' likh kar Enter dabao.
+2. Output mode choose karo:
+   - [1] Full Answer -> Explanation + Concepts + Code + Sample I/O
+   - [2] Code Only   -> Sirf clean source code
+
+AGAR CODE MEIN ERROR AA RAHA HAI (OPTION 4):
+1. '4' select karo aur language choose karo (1=C, 2=Java, 3=SQL).
+2. Apna code AUR saath mein terminal/compiler ka exact error paste karo.
+   Nayi line par 'END' likh kar submit karo.
+3. Assistant tumhe 3 cheezein dega:
+   - ### Error Cause & Explanation: Error kyu aaya, kaunsi line/logic faulty thi
+   - ### Corrected Code: 100% complete fixed code (zero placeholders)
+   - ### How to Recompile & Run: Recompile karne aur test karne ka exact command
+
+------------------------------------------------------------------------
+STEP 6: C Language Difficulty Aur Turbo C Settings
+------------------------------------------------------------------------
+Agar Turbo C use kar rahe ho:
+1. Main Menu par '5. Configure C Options' dabao.
+2. Difficulty Level choose karo:
+   - 1 = Baseline single-concept demo
+   - 2 = Two concepts combined
+   - 3 = Level 3 (Default, multi-concept menu-driven program)
+   - 4 = Level 4 (Challenging scenario)
+3. Profile choose karo:
+   - 1 = standard-c (Modern GCC style)
+   - 2 = turbo-c (Variables top par, no C99-only syntax, Turbo C friendly)
+
+------------------------------------------------------------------------
+STEP 7: Code / Query Save Karna Aur Test Karna
+------------------------------------------------------------------------
+Output aane ke baad menu se:
+- Press '3': Direct clean source code / SQL queries "output\" folder mein save ho jayega:
+    * C ke liye:      output\program_YYYYMMDD_HHMMSS.c
+    * Java ke liye:   output\Main_YYYYMMDD_HHMMSS.java
+    * Oracle ke liye: output\query_YYYYMMDD_HHMMSS.sql
+- Press '1': Follow-up changes ya additional debug questions puchhne ke liye.
+- Press '2': Agar output lamba hone par beech mein ruk gaya ho, to continuation ke liye.
+
+Run / Execute:
+- C (Turbo C):
+    Turbo C kholo aur saved .c file ko open karke Compile (Alt+F9) karo.
+- C (GCC):
+    gcc output\program_*.c -o prog && prog
+- Java:
+    javac output\Main_*.java && java Main
+- Oracle SQL:
+    SQL> @output\query_YYYYMMDD_HHMMSS.sql
+
+------------------------------------------------------------------------
+STEP 8: Clean Exit
+------------------------------------------------------------------------
+Main Menu par '7' dabao. Background engine safely band ho jayega aur RAM
+free ho jayegi.
+========================================================================

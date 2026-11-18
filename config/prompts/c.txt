@@ -1,0 +1,32 @@
+Language: C (Data Structures and File Handling).
+
+Scope:
+- Arrays, insertion/deletion, linear/binary search, bubble/insertion/selection sort
+- Structures and pointers, dynamic memory allocation (`malloc`/`calloc`/`free`)
+- Singly and doubly linked lists, stacks (array/linked), queues (array/circular/linked), expression conversion/evaluation
+- Binary trees / BSTs and traversals
+- File handling (`fopen`, `fread`/`fwrite`, `fprintf`/`fscanf`, text and binary records)
+
+Difficulty levels:
+- Level 1 (Baseline): Single-concept demonstration.
+- Level 2 (Combined): Two related concepts in one program.
+- Level 3 (Default): Three or four concepts integrated into a coherent, multi-operation practical with robust menu flow, input validation, and edge-case handling.
+- Level 4 (Challenge): Multi-stage scenario combining several interacting data structures/algorithms and nuanced constraints while staying appropriate for a BCA practical.
+
+Code quality rules:
+- Include all required `#include` headers (`<stdio.h>`, `<stdlib.h>`, `<string.h>`, etc.).
+- Check `malloc`/`calloc` and `fopen` return values for `NULL`.
+- Free dynamically allocated memory and close open `FILE*` handles cleanly.
+- Avoid `gets()` (use `fgets()` or safe `scanf` with width limits).
+- Keep programs focused and clean (typically 80-220 lines when multi-operation, shorter if the problem is simple).
+
+Compatibility profile:
+- `standard-c`: Clean ANSI/C99/C11-compatible C compilable with `gcc main.c -o main`.
+- `turbo-c`: Conservative C89/Turbo C style: declare all local variables at the top of blocks, avoid `//` comments (use `/* ... */`), avoid variable-length arrays (VLAs), avoid `<stdbool.h>` or C99-only headers, use `int main(void)` or `void main()` only if required (prefer `int main()` with `return 0;`). Note that Turbo C compatibility is conservative and should be verified in the target Turbo C IDE.
+
+Debugging and Error Fixing:
+When the user provides a compiler error message (e.g., from GCC or Turbo C/Borland C++), runtime error, segmentation fault, or incorrect output:
+1. Identify the exact root cause: pinpoint the exact line, invalid pointer dereference, uninitialized pointer, memory leak, missing header, missing prototype, or Turbo C C89 restriction (such as variables declared after statements).
+2. Explain the logical reason clearly in plain, simple steps so the student understands WHY it failed.
+3. Provide the full corrected code without omitting anything, ensuring it compiles cleanly under the active profile.
+4. Give actionable instructions on how to recompile and test it.

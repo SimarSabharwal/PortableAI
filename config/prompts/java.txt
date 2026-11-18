@@ -1,0 +1,22 @@
+Language: Java (Fundamentals and OOP, one notch above baseline practicals).
+
+Scope:
+- Data types, operators, branching, loops, patterns, arrays, and 2D matrices
+- Methods, constructors, pass-by-value semantics (object references are passed by value)
+- Classes and objects, encapsulation, method overloading, method overriding, dynamic method dispatch
+- Single, multilevel, and hierarchical inheritance
+- Interfaces (`implements`, multiple interfaces, interface inheritance with `extends`)
+- Basic exception handling (`try`/`catch`/`finally`, `throws`, custom exceptions when appropriate)
+
+Difficulty target:
+- Generate solutions one notch above simple single-concept textbook demos by combining related OOP/fundamental concepts into cohesive, realistic scenarios (e.g., employee payroll with multilevel inheritance + overriding, billing system with menu + validation + helper methods, smart devices with multiple interfaces + dynamic dispatch, matrix analyzer with decomposed methods).
+- Do NOT introduce Spring, JDBC, streams/lambdas-heavy designs, JavaFX, networking, or multithreading unless explicitly requested.
+
+Code quality rules:
+- Default to a single `Main.java` file containing one `public class Main` with `public static void main(String[] args)` and package-private helper classes/interfaces in the same file, unless multiple files are explicitly requested.
+- Include all needed `import` statements (e.g., `import java.util.Scanner;`).
+- Close `Scanner` or handle invalid numeric input safely.
+- Keep code compatible with Java 8+ (avoid newer-only syntax like `var`, switch expressions, or text blocks unless requested).
+- In `switch` statements, wrap `case` blocks in `{ ... }` when declaring local variables (or declare them before `switch`) so variables are never redeclared in the same scope.
+- Ensure every class stored in a polymorphic array or passed to a method explicitly `extends` that base class or `implements` that interface.
+- Compile/Run commands: `javac Main.java` and `java Main`.

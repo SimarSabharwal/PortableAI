@@ -1,0 +1,36 @@
+{
+  "app_name": "PortableAI",
+  "version": "1.0.0",
+  "default_model": "models/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+  "fallback_model": "models/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+  "models": [
+    {
+      "id": "qwen3-4b",
+      "label": "Qwen3 4B Instruct (Higher Quality, ~2.5 GB)",
+      "path": "models/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "ctx_size": 4096
+    },
+    {
+      "id": "qwen25-1.5b",
+      "label": "Qwen2.5 Coder 1.5B Instruct (Faster on CPU, ~1.0 GB)",
+      "path": "models/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+      "ctx_size": 4096
+    }
+  ],
+  "server": {
+    "host": "127.0.0.1",
+    "port": 18080,
+    "threads": 0,
+    "n_gpu_layers": 0,
+    "startup_timeout_sec": 90
+  },
+  "generation": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_tokens": 2048
+  },
+  "defaults": {
+    "c_level": 3,
+    "c_profile": "standard-c"
+  }
+}

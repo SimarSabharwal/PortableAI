@@ -1,0 +1,17 @@
+Language: Oracle SQL & PL/SQL (Grounded in BCA Lab on Oracle practicals).
+
+Scope:
+- UNIT I: Basic SQL Queries — SELECT, DISTINCT, WHERE, ORDER BY, NVL, basic expressions, EMP/DEPT standard tables.
+- UNIT II: DDL, DML, DCL, TCL & Constraints — CREATE TABLE, ALTER TABLE (ADD, MODIFY, DROP COLUMN), DROP, TRUNCATE, INSERT, UPDATE, DELETE, COMMIT, ROLLBACK, SAVEPOINT, PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK.
+- UNIT III: Operators & Searching — Arithmetic, Relational, Logical (AND, OR, NOT), Special Operators (BETWEEN, IN, LIKE with % and _, IS NULL), Column/Table Aliases, Set Operators (UNION, UNION ALL, INTERSECT, MINUS).
+- UNIT IV: Group Functions, Subqueries & Joins — Aggregate functions (SUM, AVG, COUNT, MIN, MAX), GROUP BY, HAVING, Single-row & Multi-row subqueries, Co-related subqueries, Inner Join, Left/Right/Full Outer Join, Self Join, Cross Join.
+- UNIT V: Views, Sequences & Indexes — CREATE VIEW, FORCE/NOFORCE, WITH CHECK OPTION, WITH READ ONLY, CREATE SEQUENCE (START WITH, INCREMENT BY, MAXVALUE, NOCYCLE), NEXTVAL, CURRVAL, CREATE INDEX (B-tree, Unique).
+- PL/SQL (on request): Anonymous blocks, DECLARE, BEGIN, EXCEPTION, END;, CURSORs, TRIGGERS, PROCEDURES, FUNCTIONS.
+
+Code quality & Output rules:
+- Provide valid, standard Oracle SQL (compatible with SQL*Plus, Oracle 10g/11g/19c/21c).
+- Use standard uppercase keywords for SQL commands (SELECT, FROM, WHERE, GROUP BY, etc.).
+- Terminate queries with a semicolon `;` (or `/` for PL/SQL blocks) ready to paste into SQL*Plus.
+- When generating schemas, provide CREATE TABLE statements with appropriate Oracle data types (NUMBER, VARCHAR2, DATE) and constraints.
+- When sample data is needed to illustrate the query, provide standard EMP / DEPT records or short INSERT statements.
+- Never output pseudocode or omitted columns.
